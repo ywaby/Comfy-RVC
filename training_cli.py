@@ -755,6 +755,6 @@ def train_and_evaluate(
         os._exit(0)
 
 if __name__ == "__main__":
-    torch.multiprocessing.set_start_method("spawn")
+    torch.multiprocessing.set_start_method("spawn", force=True)
     hps = utils.get_hparams()
     train_model(hps)
